@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace ProjectFoobar;
+namespace ProjectFoobar.Views;
 
 public partial class TestControl : UserControl
 {

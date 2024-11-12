@@ -4,9 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 			 
-			 xmlns:foo="using:ProjectVault.Templates"
+			 xmlns:foo="using:ProjectFoobar.Templates"
 			 
-             x:Class="ProjectFoobar.TestControl">
+             x:Class="ProjectFoobar.Views.TestControl">
 
 	<foo:MyTemplate>
 		<TextBox>

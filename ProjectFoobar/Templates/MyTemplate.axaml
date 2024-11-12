@@ -1,26 +1,25 @@
-<ResourceDictionary xmlns="https://github.com/avaloniaui"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-					
-					xmlns:foo="using:ProjectFoobar.Templates">
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"					
+		xmlns:foo="using:ProjectFoobar.Templates">
 
-	<ControlTheme x:Key="SomeTemplateTheme" TargetType="foo:MyTemplate">
-		<Setter Property="Template">
+	<Style Selector="foo|MyTemplate">
+		<Setter Property="Template" >
 			<ControlTemplate>
 				<DockPanel>
-					<DockPanel Name="Top"></DockPanel>
+					<DockPanel DockPanel.Dock="Top" Name="Top"><Label Content="Top" /></DockPanel>
+					<DockPanel DockPanel.Dock="Bottom"  Name="Bottom"><Label Content="Bottom" /></DockPanel>
 					<DockPanel Name="Body">
 						<ContentPresenter x:Name="PART_ContentPresenter"
-                              Content="{TemplateBinding Content}"
-                              ContentTemplate="{TemplateBinding ContentTemplate}"
-                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
-                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                              Foreground="{TemplateBinding Foreground}"
-                              Margin="{TemplateBinding Padding}"/>
+							Content="{TemplateBinding Content}"
+							ContentTemplate="{TemplateBinding ContentTemplate}"
+							HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+							VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+							Foreground="{TemplateBinding Foreground}"
+							Margin="{TemplateBinding Padding}"/>
 					</DockPanel>
-					<DockPanel Name="Bottom"></DockPanel>
 				</DockPanel>
 			</ControlTemplate>
 		</Setter>
-	</ControlTheme>
+	</Style>
 	
-</ResourceDictionary>
+</Styles>
