@@ -1,0 +1,26 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					
+					xmlns:foo="using:ProjectFoobar.Templates">
+
+	<ControlTheme x:Key="SomeTemplateTheme" TargetType="foo:MyTemplate">
+		<Setter Property="Template">
+			<ControlTemplate>
+				<DockPanel>
+					<DockPanel Name="Top"></DockPanel>
+					<DockPanel Name="Body">
+						<ContentPresenter x:Name="PART_ContentPresenter"
+                              Content="{TemplateBinding Content}"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                              Foreground="{TemplateBinding Foreground}"
+                              Margin="{TemplateBinding Padding}"/>
+					</DockPanel>
+					<DockPanel Name="Bottom"></DockPanel>
+				</DockPanel>
+			</ControlTemplate>
+		</Setter>
+	</ControlTheme>
+	
+</ResourceDictionary>
